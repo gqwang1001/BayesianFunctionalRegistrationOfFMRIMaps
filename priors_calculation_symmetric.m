@@ -245,7 +245,7 @@ for i=1:33
     inverse_coord = [allX(in_idxs) allY(in_idxs)];
     invImgs{i,1} = [inverse_coord, inverse_intensities];
 end
-save(['../data/symmetric_IMG_priors_30by30_round_WProc_3pks_alpha_' num2str(alpha) '.mat'], "invImgs");
+save(['../data/symmetric_IMG_priors.mat'], "invImgs");
 
 %% After the compuation from STAN, draw the posterior means 
 
