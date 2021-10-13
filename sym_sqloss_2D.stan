@@ -233,11 +233,10 @@ model{
       b ~ lognormal(log(b0), phi / sqrt(lbd_b * N_ref));
       reg_sum ~ normal(0, phi /  sqrt(lbd_T * N_ref));
       
-      // b_rv ~ lognormal(log(b0_rv), phi / sqrt(lbd_b_rv * N_ref));
-      // reg_sum_rv ~ normal(0, phi /  sqrt(lbd_T_rv * N_ref));
+      b_rv ~ lognormal(log(b0_rv), phi / sqrt(lbd_b_rv * N_ref));
+      reg_sum_rv ~ normal(0, phi /  sqrt(lbd_T_rv * N_ref));
       
-      target += sum(log_lik) - 0.5*log(phi);
-      // target += sum(log_lik) + sum(log_lik_rv) - 0.5*log(phi);
+      target += sum(log_lik) + sum(log_lik_rv) - 0.5*log(phi);
 
     }
       
