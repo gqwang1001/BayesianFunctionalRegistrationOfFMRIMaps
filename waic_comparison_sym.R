@@ -29,7 +29,7 @@ for (subjs in 1:nsubj) {
                                                                  ".rds"))
                                     fit.summary = rstan::summary(fits)
                                     rhat = max(fit.summary$summary[, "Rhat"])
-                                    if (rhat>1.05){
+                                    if (rhat>1.01){
                                             loo_results[[k]] = NA
                                     }else{
                                             loo_results[[k]] <-loo::loo(fits, K = 10, parameter_name = "log_lik", cores = 10)
