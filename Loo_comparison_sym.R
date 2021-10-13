@@ -10,7 +10,6 @@ lbd_b_list_rv = c(.01, 1, 10, 20)
 
 ref.ind <- 20
 
-
 for (subjs in 1:nsubj) {
         loo_results = list()
         k = 1
