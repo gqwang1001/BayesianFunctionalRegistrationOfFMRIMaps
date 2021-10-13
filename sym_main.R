@@ -6,8 +6,8 @@ library(geoR)
 library(R.matlab)
 # load data and priors  ---------------------------------------------------
 painDat = readRDS(file = paste0("data/Paindata_Trial_30by30_round.rds"))
-ini.prior.procrustes <- R.matlab::readMat(paste0("data/symmetric_priors_30by30_round_WProc_3pks_alpha_6.mat"))$trsall
-ini.imgs <- R.matlab::readMat(paste0("data/symmetric_IMG_priors_30by30_round_WProc_3pks_alpha_6.mat"))
+ini.prior.procrustes <- R.matlab::readMat(paste0("data/symmetric_priors_.mat"))$trsall
+ini.imgs <- R.matlab::readMat(paste0("data/symmetric_IMG_priors_.mat"))
 
 ref.mat <- readMat("data/reference_3pks.mat")$ref 
 ref.dim <- dim(ref.mat)
