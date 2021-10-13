@@ -1,5 +1,3 @@
-// This version changes the likelihood to be (y(T) - R) ~ N(0, I).
-// Error free
 functions{
   //define transposed rotation matrix
   matrix rotation(real theta){
